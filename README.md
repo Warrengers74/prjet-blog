@@ -1,1 +1,1 @@
-# prjet-blog
+# projet-blog
