@@ -1,0 +1,34 @@
+@media all and (max-width: 670px) {
+  .logomenu {
+    display: block;
+  }
+
+  .logoheader {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menuheader {
+    display: flex;
+    justify-content: center;
+    top: -10px;
+  }
+
+  .footerpack {
+    display: block;
+    text-align: center;
+  }
+
+  .footerpack1,
+  .footerpack2,
+  .footerpack3 {
+    width: 80%;
+    margin: 20px auto;
+    padding-top: 10px;
+  }
+
+  .menufooter {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
