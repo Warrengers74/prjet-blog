@@ -3,7 +3,7 @@ require_once 'connect.php';
 
 $idArticle = $_GET['id'];
 
-$req = $db->prepare('SELECT * FROM `articles` INNER JOIN  `categories` ON articles.id_category = categories.id_category WHERE articles.id_category = :id');
+$req = $db->prepare('SELECT `id_article`, `title`, `image`, `category`, `image_cat` FROM `articles` INNER JOIN  `categories` ON articles.id_category = categories.id_category WHERE articles.id_category = :id');
 $req->bindParam('id', $idArticle, PDO::PARAM_INT);
 $req->execute();
 

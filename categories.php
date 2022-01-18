@@ -1,7 +1,7 @@
 <?php
 require_once 'connect.php';
 
-$req = $db->query('SELECT * FROM `categories`');
+$req = $db->query('SELECT `id_category`, `category`, `image_cat` FROM `categories`');
 ob_start();
 ?>
 <h1 class="titreCategorie">Catégories :</h1>

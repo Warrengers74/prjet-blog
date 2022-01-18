@@ -5,11 +5,11 @@ if(isset($_GET['id'])) {
     $idArticle = $_GET['id'];
 }
 
-$req = $db->prepare('SELECT * FROM `articles` WHERE `id_article` = :id');
+$req = $db->prepare('SELECT `id_article`, `title`, `content`, `image` FROM `articles` WHERE `id_article` = :id');
 $req->bindParam('id', $idArticle, PDO::PARAM_INT);
 $req->execute();
 
-$v = $db->query("SELECT * FROM `articles`");
+$v = $db->query("SELECT `id_article`, `title`, `content`, `image` FROM `articles`");
 $v = $v->fetchAll(PDO::FETCH_ASSOC);
 
 

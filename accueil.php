@@ -9,7 +9,7 @@ if(isset($_GET['page']) && !empty($_GET['page'])){
 require_once('connect.php');
 
 // On détermine le nombre total d'articles
-$sql = 'SELECT COUNT(*) AS nb_articles FROM `articles`;';
+$sql = 'SELECT COUNT(`id_article`) AS nb_articles FROM `articles`;';
 
 // On prépare la requête
 $query = $db->prepare($sql);
@@ -31,7 +31,7 @@ $pages = ceil($nbArticles / $parPage);
 // Calcul du 1er article de la page
 $premier = ($currentPage * $parPage) - $parPage;
 
-$sql = 'SELECT * FROM `articles` ORDER BY `id_article` DESC LIMIT :premier, :parpage;';
+$sql = 'SELECT `id_article`, `title`, `image` FROM `articles` ORDER BY `id_article` DESC LIMIT :premier, :parpage;';
 
 // On prépare la requête
 $query = $db->prepare($sql);
