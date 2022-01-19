@@ -5,9 +5,7 @@ require_once 'connect.php';
 
 $idArticle = $_GET['id'];
 
-$req = $db->prepare('SELECT * FROM `articles` INNER JOIN  `categories` ON articles.id_category = categories.id_category 
-                    INNER JOIN  `users` ON articles.id_user = users.id_user 
-                    WHERE articles.id_article = :id');
+$req = $db->prepare('SELECT `id_article`, `title`, `content`, `image`, `category`, `username` FROM `articles` INNER JOIN  `categories` ON articles.id_category = categories.id_category INNER JOIN  `users` ON articles.id_user = users.id_user WHERE articles.id_article = :id');
 $req->bindParam('id', $idArticle, PDO::PARAM_INT);
 $req->execute();
 

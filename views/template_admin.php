@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./views/css/style_admin.css">
 </head>
 <body>
-    <section class="row">
+    <section>
         <!-- echo de la variable $content -->
         <?= $content ?>
     </section>

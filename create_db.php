@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
         //  renvoi à la page admin.php une fois la requête effectuée
         header('location: /projet-blog/admin');
     } else {
-        echo "Le format de l'image n'est pas le bon";
+        echo "Le format de l'image n'est pas le bon ou le poid de l'image est trop important.";
     }
 }
 

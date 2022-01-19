@@ -3,7 +3,7 @@ session_start();
 // je veux le fichier 'connect.php' pour me connecter à la base de donnée
 require_once 'connect.php';
 
-$req = $db->query('SELECT * FROM `articles` INNER JOIN  `categories` ON articles.id_category = categories.id_category ORDER BY `id_article` DESC');
+$req = $db->query('SELECT `id_article`, `title`, `image`, `category` FROM `articles` INNER JOIN  `categories` ON articles.id_category = categories.id_category ORDER BY `id_article` DESC');
 
 if(isset($_SESSION['username'])) {
     // démarre la temporisation de sortie. Tant qu'elle est enclenchée, aucune donnée, hormis les en-têtes, 

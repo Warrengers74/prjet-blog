@@ -7,7 +7,7 @@ body {
   font-family: "Quattrocento", serif;
   color: #000000;
 }
-
+/* ----------- HEADER ----------- */
 .logomenu {
   display: flex;
   justify-content: center;
@@ -73,7 +73,7 @@ body {
 .imageheader img {
   width: 100%;
 }
-
+/* ----------- FOOTER ----------- */
 .footerAccueil {
   background-color: #99e6fc;
 }
@@ -127,7 +127,7 @@ body {
 .menufooter a:hover {
   text-decoration: underline;
 }
-
+/* ----------- TITRE DES PAGES ----------- */
 h1 {
   font-family: "Oswald", sans-serif;
   margin-bottom: 20px;
@@ -145,7 +145,7 @@ h1 {
 .titreCategorie {
   text-decoration: underline 4px solid #68ca44;
 }
-
+/* ----------- PAGE ACCUEIL ----------- */
 .sectionAccueil {
   display: flex;
   flex-wrap: wrap;
@@ -179,6 +179,10 @@ h1 {
   transform: translate(-50%, -50%);
   text-align: center;
   text-shadow: 1px 1px 2px black;
+}
+
+.texte a {
+  text-decoration: none;
   color: #fff;
 }
 
@@ -206,7 +210,7 @@ h1 {
 .active {
   background-color: #99e6fc;
 }
-
+/* ----------- PAGE ARTICLES ----------- */
 .articles {
   display: block;
   text-align: center;
@@ -223,12 +227,23 @@ h1 {
   margin-bottom: 10px;
 }
 
-.articles p {
+.articles h3 {
+  font-family: "Oswald", sans-serif;
+  text-align: left;
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 4px solid #e0d2ce;
 }
 
+.articles a {
+  text-decoration: underline 4px solid #e0d2ce;
+  color: #000000;
+}
+
+.articles a:hover {
+  background-color: #e0d2ce;
+}
+/* ----------- PAGE CATEGORIES ----------- */
 .sectionCategories {
   display: flex;
   flex-wrap: wrap;
@@ -251,7 +266,15 @@ h1 {
 }
 
 .categories h2 {
-  font-family: "Oswald", sans-serif;
-  text-decoration: underline 4px solid #68ca44;
   text-align: center;
+}
+
+.categories h2 a {
+  font-family: "Oswald", sans-serif;
+  color: #000000;
+  text-decoration: underline 4px solid #68ca44;
+}
+
+.categories h2 a:hover {
+  background-color: #68ca44;
 }

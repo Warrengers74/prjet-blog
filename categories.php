@@ -11,7 +11,7 @@ while ($article = $req->fetch(PDO::FETCH_ASSOC)) {
 ?>
     <article class="categories">
         <a href="./categories_suite.php?id=<?=$article['id_category']?>"><img src='<?=$article['image_cat']?>'></a>
-        <h2><?=$article['category']?></h2>
+        <h2> <a href="./categories_suite.php?id=<?=$article['id_category']?>"><?=$article['category']?></a></h2>
     </article>
 <?php    
 }

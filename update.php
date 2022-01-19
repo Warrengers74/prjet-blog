@@ -6,7 +6,7 @@ require_once 'connect.php';
 $id = $_GET['id'];
 
 // je fais une requete dans ma base de donnée
-$req = $db->query('SELECT * FROM `articles` WHERE `id_article` = '. $id);
+$req = $db->query('SELECT `id_article`, `image`, `title`, `content`, `id_category`, `id_user` FROM `articles` WHERE `id_article` = '. $id);
 
 // PDO::FETCH_ASSOC: transforme mon objet en tableau
 $post = $req->fetch(PDO::FETCH_ASSOC);

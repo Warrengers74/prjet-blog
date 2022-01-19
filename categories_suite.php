@@ -16,7 +16,7 @@ foreach($articles as $article){
 ?>
     <div class="contenant">
         <a href="./articles.php?id=<?=$article['id_article']?>"><img src='<?=$article['image']?>'></a>
-        <h2 class="texte"><?=$article['title']?></h2>
+        <h2 class="texte"><a href="./articles.php?id=<?=$article['id_article']?>"><?=$article['title']?></a></h2>
     </div>
 <?php 
 }
